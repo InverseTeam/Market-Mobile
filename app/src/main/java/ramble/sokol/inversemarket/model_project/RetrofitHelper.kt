@@ -14,7 +14,7 @@ import javax.inject.Singleton
 object RetrofitHelper {
 
     // basic link to api
-    private const val BASE_URL = "https://market.inverse-team.store/"
+    private const val BASE_URL = "https://market.inverse-team.store/api/"
 
     @Singleton
     @Provides

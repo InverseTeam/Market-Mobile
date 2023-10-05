@@ -7,4 +7,7 @@
     <string name="text_menu">Меню</string>
     <string name="text_basket">Корзина</string>
     <string name="text_profile">Профиль</string>
+    <string name="text_successful_entry">Вы успешно вошли</string>
+    <string name="text_toast_no_internet">Проверьте подключение к интернету</string>
+    <string name="text_incorrect_data_entry">Неверный логин или пароль</string>
 </resources>

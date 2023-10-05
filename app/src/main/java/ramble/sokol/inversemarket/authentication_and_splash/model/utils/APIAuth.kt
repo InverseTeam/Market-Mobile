@@ -13,14 +13,7 @@ import retrofit2.http.POST
 interface APIAuth {
 
     // request for login and get token
-    @POST("api/users/auth/token/login/")
+    @POST("users/auth/token/login/")
     fun entryAndGetToken(@Body body: JsonObject): Call<ResponseAuth>
 
-    // request for create new user
-    @POST("api/users/auth/users/")
-    fun createAccount(@Body body: JsonObject): Call<ResponseAuth>
-
-    // get all roles
-    @GET("api/users/roles/")
-    fun getAllRoles(): Call<List<ResponseAuth>>
 }
