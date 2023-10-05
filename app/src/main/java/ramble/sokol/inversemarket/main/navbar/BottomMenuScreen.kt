@@ -1,5 +1,6 @@
 package ramble.sokol.inversemarket.main.navbar
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -47,11 +48,12 @@ fun BottomMenuScreen(
 ){
 
     var selectedItem by rememberSaveable {
-        mutableIntStateOf(1)
+        mutableIntStateOf(0)
     }
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize(),
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
