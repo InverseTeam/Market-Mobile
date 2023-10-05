@@ -1,4 +1,4 @@
-package ramble.sokol.inversemarket
+package ramble.sokol.inversemarket.main.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,37 +10,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.ramcosta.composedestinations.DestinationsNavHost
+import dagger.hilt.android.AndroidEntryPoint
 import ramble.sokol.inversemarket.ui.theme.InverseMarketTheme
+import ramble.sokol.sberafisha.authentication_and_splash.view.screens.NavGraphs
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            InverseMarketTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+            DestinationsNavHost(navGraph = NavGraphs.root)
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    InverseMarketTheme {
-        Greeting("Android")
     }
 }
