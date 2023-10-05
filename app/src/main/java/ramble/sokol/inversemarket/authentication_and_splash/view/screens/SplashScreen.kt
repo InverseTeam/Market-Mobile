@@ -29,6 +29,7 @@ import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import kotlinx.coroutines.delay
 import ramble.sokol.inversemarket.R
+import ramble.sokol.sberafisha.authentication_and_splash.view.screens.destinations.LoginScreenDestination
 
 @Destination(start = true)
 @Composable
@@ -55,7 +56,7 @@ fun SplashScreen(
     ) {
         delay(3000L)
         navigator.popBackStack()
-    //navigator.navigate(AdScreenDestination)
+        navigator.navigate(LoginScreenDestination)
     }
 
     Column(
