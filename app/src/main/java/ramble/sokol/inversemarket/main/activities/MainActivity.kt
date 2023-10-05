@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.ramcosta.composedestinations.DestinationsNavHost
 import dagger.hilt.android.AndroidEntryPoint
+import ramble.sokol.NavGraphs
 import ramble.sokol.inversemarket.ui.theme.InverseMarketTheme
-import ramble.sokol.sberafisha.authentication_and_splash.view.screens.NavGraphs
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

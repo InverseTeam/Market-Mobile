@@ -30,6 +30,7 @@ import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.unit.dp
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import ramble.sokol.destinations.BottomMenuScreenDestination
 import ramble.sokol.inversemarket.R
 import ramble.sokol.inversemarket.authentication_and_splash.view.components.ButtonForLogin
 import ramble.sokol.inversemarket.authentication_and_splash.view.components.ProgressBarAuth
@@ -168,6 +169,8 @@ fun LoginScreen(
 }
 
 private fun entry(context: Context, navigator: DestinationsNavigator, email: String, password: String){
+    navigator.popBackStack()
+    navigator.navigate(BottomMenuScreenDestination)
 
 //    val body = JsonObject().apply {
 //        addProperty("email", email)
