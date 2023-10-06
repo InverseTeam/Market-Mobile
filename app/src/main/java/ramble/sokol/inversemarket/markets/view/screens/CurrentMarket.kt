@@ -1,11 +1,12 @@
-package ramble.sokol.inversemarket.basket.view.screens
+package ramble.sokol.inversemarket.markets.view.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -17,21 +18,19 @@ import ramble.sokol.inversemarket.R
 
 @Composable
 @Destination
-fun BasketScreen(
+fun CurrentMarket(
     navigator: DestinationsNavigator
 ){
-    
-    Spacer(modifier = Modifier.padding(top = 16.dp))
-    
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
             .padding(bottom = 60.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        Image(painter = painterResource(id = R.drawable.image_screen_basket), contentDescription = "image_screen_basket")
+        Image(painter = painterResource(id = R.drawable.image_current), contentDescription = "image_current")
 
     }
 
